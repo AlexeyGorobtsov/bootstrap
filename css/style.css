@@ -23,6 +23,7 @@ h3{
     background: #ec4835;
 }
 
+
 /*=============================header=========================================*/
 .menu-top .navbar{
     margin-bottom: 0;
@@ -62,6 +63,72 @@ h3{
     position: relative;
     top: -1px;
 }
+.menu-carousel .item {
+    min-height: 600px;
+}
+.menu-carousel .bgslide{
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.carousel.fade {
+    opacity: 1;
+}
+.carousel.fade .item{
+    opacity: 0;
+    transition: 0.5s;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+.carousel.fade .item.active{
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.menu-carousel .carousel-caption {
+    left: 0;
+    top: 170px ;
+}
+
+.menu-carousel .carousel-caption h1 {
+    font-weight: 700;
+    font-size: 48px;
+    color: #ffffff;
+}
+.menu-carousel .carousel-caption h3 {
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 40px;
+
+}
+
+.menu-carousel .carousel-caption .btn-red {
+    padding: 20px 30px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 24px;
+}
+
+.menu-carousel .carousel-caption .btn-red {
+    text-decoration: none;
+}
+
+.menu-carousel .container {
+    position: relative;
+}
+
+.menu-carousel .carousel-control {
+    z-index: 10;
+}
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
@@ -69,15 +136,36 @@ h3{
         float: none !important;
     }
 }
+@media only screen and (max-width : 1070px) {
+    .menu-carousel .carousel-caption {
+        left: 20%;
+    }
+}
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-	
+
+    .menu-carousel .carousel-caption h1 {
+        font-size: 38px;
+    }
+    .menu-carousel .carousel-caption h3 {
+        font-size: 22px;
+    }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
 
+    .menu-carousel .carousel-caption h1 {
+        font-size: 36px;
+    }
+    .menu-carousel .carousel-caption h3 {
+        font-size: 20px;
+    }
+    .menu-carousel .carousel-caption .btn-red {
+        padding: 15px 20px;
+        font-size: 16px;
+    }
 }
 @media only screen and (max-width : 767px) {
     .menu-top .navbar-default .navbar-nav>li>a:hover{
@@ -91,5 +179,7 @@ h3{
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-
+    .menu-carousel .carousel-caption .btn-red {
+        font-size: 14px;
+    }
 }
